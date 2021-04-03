@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://images/badwater.png" type="Texture" id=1]
+[ext_resource path="res://Objects/Hazards/BadWater.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.08166, 0.70924 )
+
+[node name="BadWater" type="Sprite"]
+position = Vector2( 20.6801, -13.3318 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BadWater" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2( -1.06626, 0.13176 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BadWater"]
+visible = false
+position = Vector2( 1.09378, 7.23783 )
+shape = SubResource( 1 )
