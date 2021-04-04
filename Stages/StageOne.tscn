@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://TileSets/DirtTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://images/mellowplatformerparalax.png" type="Texture" id=2]
 [ext_resource path="res://TileSets/PlatformTiles.tres" type="TileSet" id=3]
-[ext_resource path="res://UI/UICanvasLayer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Objects/ChangeStage.tscn" type="PackedScene" id=6]
 [ext_resource path="res://TileSets/HazardTiles.tres" type="TileSet" id=8]
@@ -50,5 +49,3 @@ offset = Vector2( 0, -90 )
 [node name="ChangeStage" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1239.34, 4.44319 )
 target_stage = "res://Stages/StageTwo.tscn"
-
-[node name="CanvasLayer" parent="." instance=ExtResource( 4 )]

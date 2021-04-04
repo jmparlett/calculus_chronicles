@@ -9,7 +9,9 @@ const FLOOR = Vector2(0, -1) #0, -1 is the top of a 1 by 1 tile
 var velocity = Vector2()
 var on_ground = false
 var is_dead = false
+#make health visble in editor
 var health = 100
+
 
 func _physics_process(_delta):
 	if not is_dead:
@@ -47,9 +49,7 @@ func _physics_process(_delta):
 			for i in range(get_slide_count()):
 				if "Hazards" in get_slide_collision(i).collider.name:
 					health-=1
-					print("health is now ", health)
-				if "BadWater" in get_slide_collision(i).collider.name:
-					health-=1
+					$CanvasLayer/Panel/Interface/VBoxContainer/Bar/TextureProgress.value = health
 					print("health is now ", health)
 
 
